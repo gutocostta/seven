@@ -1,0 +1,64 @@
+
+@charset "UTF-8";
+
+// base =================================================================
+
+$font-default: 'Montserrat', sans-serif;
+$line-height-base: 1.5;
+$font-size-base: 14px;
+$path-images: "../assets/images";
+
+//colors =================================================================
+
+$black:#000;
+$white:#fff;
+
+$gray: #546E7A;
+$gray-middle: #4a4a4a;
+$gray-dark: #455A64;
+$gray-regular: #7e7e7e;
+$gray-light:#f5f6fa;
+
+$red:#c02f4e;
+$orange: #ff6c00;
+$yellow: #FBFE63;
+
+
+// medias =================================================================
+
+$mobile-width : 799px;
+$desktop-width : 800px;
+
+
+// Mixins =================================================================
+
+
+@mixin clearfix() {
+    &::after {
+      display: block;
+      clear: both;
+      content: "";
+    }
+}
+
+
+@mixin list-unstyled {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+
+@mixin desktop {
+    @media ( min-width: #{$desktop-width} ) {
+        @content;
+    }
+}
+
+
+@mixin mobile {
+    @media ( max-width: #{$mobile-width} ) {
+        @content;
+    }
+}
+
